@@ -44,3 +44,28 @@
 
     > "Images" have a displace value of "inline" , so we can make it "block" if something is not working right.
 
+    > "Margin" and "Padding" values in em are relative to the element's current font-size value.
+
+  **> An "em" value can compound from one level to another.
+        Ex: 
+            .parent-container{
+                font-size: 1.2em;
+            }
+
+            .child-item{
+                font-size: 1.5em; /* Here the font size of the child item is getting compounded by ( 1.2 * 1.5 ) */
+            }
+
+            - To resolve this issue we use, "rem"
+
+    > "rem" unit : (The root em) :
+
+        - By default, a "rem" value will be a multiple of 16px.
+
+        ( It will only change if the html root font-size is changed, 
+        Ex:
+            html{
+                font-size: 20 // Now the rem will act according to this, otherwise the default 16px
+            })
+
+    > 
