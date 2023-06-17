@@ -10,6 +10,8 @@
 
 # HTML
 
+    > &lt; and &gt; 
+
     
 
 # CSS
@@ -68,4 +70,88 @@
                 font-size: 20 // Now the rem will act according to this, otherwise the default 16px
             })
 
-    > 
+    > line-height: 
+
+        - The recommended approach for setting line-height value is using a "unitless number" 
+        
+        - Ex: Setting the line-height value to "1.5" will (150% of the font-size)
+
+        - Set line-height at approximately 1.5 times the font size (150%).
+
+            Ex: 
+                p {
+                    line-height: 1.5;
+                }
+
+    >> Recommended unit according to the element:
+
+        > font-sizes:
+            - Use "rem"
+            - No compunding
+            - More predictable
+        
+        > Margin & paddings :
+            - Use "em"
+            - Proportional scaling
+            - Based on element's current font-size
+
+        > Line-height : 
+            - Unitless number value
+
+        > Width:
+            - Use "%"
+            - Flexible containers
+            - Flexible images
+
+        > max-width:
+            - Use "px"
+            - Easier to manage
+            - Ensures consistency
+
+    > media queries: (We can create different layouts depending on the browser viewport or the device with this feature)
+
+        Ex:
+            @media (max-width: 499px) {     // max 499 or narrower
+                body {
+                    color: #faf9f6;
+                    background-color: #202945;
+                }
+            }
+
+            @media (min-width: 500px) {     // min 500 or wider
+                body {
+                    color: aliceblue;
+                    background-color: cornflowerblue;
+                }
+            }
+
+        - The points at which media query gets introduced (e.g: min-width: 500px, max-width: 499px) are known as "Breakpoints" :
+
+            > Breakpoints :
+                - Change layout
+                - Update text size 
+                - Page adjustment
+
+        - We can combine "media queries" conditions to create a fix-range breakpoints using the "and" keyword.
+
+            Ex: 
+                @media (min-width: 500px) and (max-width: 799px) {
+                    body {
+                        color: aliceblue;
+                        background-color: cornflowerblue;
+                    }
+                    
+                    h1 {
+                        font-size: 3.5rem;
+                    }
+                }
+
+              - Here the properties will be applied between 500px and 799px.
+
+    >>*> We should always design as "Mobile-First"
+
+        > Mobile-first: optimizing the experience for mobile users and putting their needs first.
+
+            - Here we write the base CSS with mobile device in mind first.
+            - Use media queries to adjust the layout and design for wider screens.
+            - 
