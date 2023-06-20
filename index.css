@@ -4,7 +4,7 @@ body {
     margin: 0;
 }
 
-/* ----- TYPOGRAPHY ----- */Y
+/* ----- TYPOGRAPHY ----- */
 
 h1, 
 h3 {
@@ -13,12 +13,12 @@ h3 {
 
 h1 {
     color: whitesmoke;
-    font-size: 2.25rem;
+    font-size: 1.75rem;
 }
 
 h2 {
     color: #451c7a;
-    font-size: 1.75rem;
+    font-size: 1.375rem;
     margin-top: 0;
 }
 
@@ -32,7 +32,7 @@ p {
 
 .subheading {
     display: block;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #d0aaff;
 }
 
@@ -54,12 +54,12 @@ a:active {
 
 .btn {
     font-size: 1.125rem;
+    text-align: center;
     font-weight: 500;
     text-decoration: none;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.75rem;
+    display: block;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
     border-radius: 4.6px;
 }
 
@@ -89,7 +89,7 @@ a:active {
 header, 
 section, 
 footer {
-    padding: 2.875em 0;
+    padding: 1.25em 0;
 }
 
 header, 
@@ -103,25 +103,18 @@ header,
 
 .container {
     width: 90%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .main-image {
     width: 100%;
-    max-width: 640px;
     display: block;
-    /* margin-bottom: 32px; */
+    max-width: 640px;
     margin: 0 auto 2em;
 }
 
-/* .section-two-image-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-} */
-
 .feature-image {
-    /* width: 48%; */
     width: 100%;
     border-radius: 4.6px;
     margin-bottom: 1em;
@@ -132,17 +125,89 @@ footer {
     color: #5f29a3;
 }
 
-/* .....MEDIA QUERIES..... */
+/* ----- NAVIGATION ----- */
 
-@media (min-width: 480px){
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.125rem;
+    display: block;
+    padding: 0.85rem 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media (min-width: 480px) {
     .section-two-image-container {
         display: flex;
         justify-content: space-between;
     }
-
+    
     .feature-image {
-        width: 48%;
-        border-radius: 4.6px;
+        width: 48.8%;        
+    }
+}
+
+@media (min-width: 768px) {
+    header,
+    section,
+    footer {
+        padding: 2.875em 0;        
+    }
+
+    nav ul{
+        display: flex;
+    }
+
+    header .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav li{
+        margin-left: 1.15rem;
+    }
+    
+    .btn {
+        display: inline-block;
+        margin-right: 0.5em;
+    }
+    
+    h1 {
+        font-size: 2.25rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .subheading {
+        font-size: 1.25rem;
+    }
+    
+    p {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 768px){
+    header{
+        text-align: center;
+    }
+
+    nav{
+        margin-top: 0.8rem;
+    }
+
+    li:not(:last-child) {
+        border-bottom: 1px dotted #a190b6;
     }
 
 }

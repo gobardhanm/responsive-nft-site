@@ -12,6 +12,8 @@
 
     > &lt; and &gt; 
 
+    > "view port meta data" : This meta tag lets mobile browser know that they should set the width of their viewport to the device width and to scale the content of the page that when it initially load its the 100% of the width of the device .
+
     
 
 # CSS
@@ -154,4 +156,14 @@
 
             - Here we write the base CSS with mobile device in mind first.
             - Use media queries to adjust the layout and design for wider screens.
-            - 
+            
+    > Some common "Breakpoints" are :-
+
+        - 480px : For Mobile Devices
+        - 768px : For tablets
+        - 1024px : For Smaller computer & laptop screen
+        - 1280px : For Desktop screens and wider Screen
+
+    > "link" is an inline element, and we can not apply padding on inline elements.
+
+    > "desendent selector" is helpful while aligning using flex.
